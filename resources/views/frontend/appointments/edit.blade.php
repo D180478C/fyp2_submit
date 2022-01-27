@@ -4,7 +4,10 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
 
+    
+
             <div class="card">
+            
                 <div class="card-header">
                     {{ trans('global.edit') }} {{ trans('cruds.appointment.title_singular') }}
                 </div>
@@ -15,23 +18,21 @@
                         @csrf
                         <div class="form-group">
                             <label class="required" for="name">{{ trans('cruds.appointment.fields.name') }}</label>
-                            <input class="form-control" type="text" name="name" id="name" value="{{ old('name', $appointment->name) }}" required>
+                            <input class="form-control" type="text" name="name" id="name" placeholder="Applicant's Name" value="{{ old('name', $appointment->name) }}" required>
                             @if($errors->has('name'))
                                 <div class="invalid-feedback">
                                     {{ $errors->first('name') }}
                                 </div>
                             @endif
-                            <span class="help-block">{{ trans('cruds.appointment.fields.name_helper') }}</span>
                         </div>
                         <div class="form-group">
                             <label class="required" for="nric">{{ trans('cruds.appointment.fields.nric') }}</label>
-                            <input class="form-control" type="number" name="nric" id="nric" value="{{ old('nric', $appointment->nric) }}" step="1" required>
+                            <input class="form-control" type="number" name="nric" id="nric" placeholder="Applicant's NRIC" value="{{ old('nric', $appointment->nric) }}" step="1" required>
                             @if($errors->has('nric'))
                                 <div class="invalid-feedback">
                                     {{ $errors->first('nric') }}
                                 </div>
                             @endif
-                            <span class="help-block">{{ trans('cruds.appointment.fields.nric_helper') }}</span>
                         </div>
                         <div class="form-group">
                             <label class="required" for="appointment_date">{{ trans('cruds.appointment.fields.appointment_date') }}</label>
@@ -58,9 +59,10 @@
                             <span class="help-block">{{ trans('cruds.appointment.fields.time_helper') }}</span>
                         </div>
                         <div class="form-group">
-                            <button class="btn btn-danger" type="submit">
+                            <button class="btn btn-add" type="submit">
                                 {{ trans('global.save') }}
                             </button>
+                            <a href="{{route('frontend.appointments.index')}}" class="btn btn-danger"> << Back </a>
                         </div>
                     </form>
                 </div>

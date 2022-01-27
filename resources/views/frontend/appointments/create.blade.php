@@ -15,7 +15,7 @@
                         @csrf
                         <div class="form-group">
                             <label class="required" for="name">{{ trans('cruds.appointment.fields.name') }}</label>
-                            <input class="form-control" type="text" name="name" id="name" value="{{ old('name', '') }}" required>
+                            <input class="form-control" type="text" name="name" id="name" value="{{ old('name', '') }}" placeholder="Applicant's Name" required>
                             @if($errors->has('name'))
                                 <div class="invalid-feedback">
                                     {{ $errors->first('name') }}
@@ -25,7 +25,7 @@
                         </div>
                         <div class="form-group">
                             <label class="required" for="nric">{{ trans('cruds.appointment.fields.nric') }}</label>
-                            <input class="form-control" type="number" name="nric" id="nric" value="{{ old('nric', '') }}" step="1" required>
+                            <input class="form-control" type="number" name="nric" id="nric" placeholder="Applicant's NRIC" value="{{ old('nric', '') }}" step="1" required>
                             @if($errors->has('nric'))
                                 <div class="invalid-feedback">
                                     {{ $errors->first('nric') }}
@@ -35,7 +35,7 @@
                         </div>
                         <div class="form-group">
                             <label class="required" for="appointment_date">{{ trans('cruds.appointment.fields.appointment_date') }}</label>
-                            <input class="form-control date" type="text" name="appointment_date" id="appointment_date" value="{{ old('appointment_date') }}" required>
+                            <input class="form-control date" type="text" name="appointment_date" placeholder="Select The Date For Appointment " id="appointment_date" value="{{ old('appointment_date') }}" required>
                             @if($errors->has('appointment_date'))
                                 <div class="invalid-feedback">
                                     {{ $errors->first('appointment_date') }}
@@ -58,9 +58,10 @@
                             <span class="help-block">{{ trans('cruds.appointment.fields.time_helper') }}</span>
                         </div>
                         <div class="form-group">
-                            <button class="btn btn-danger" type="submit">
+                            <button class="btn btn-add" type="submit">
                                 {{ trans('global.save') }}
                             </button>
+                            <a href="{{route('frontend.appointments.index')}}" class="btn btn-danger"> << Back </a>
                         </div>
                     </form>
                 </div>

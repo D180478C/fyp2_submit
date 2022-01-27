@@ -45,7 +45,7 @@ class AppointmentController extends Controller
             return  redirect()->route('frontend.appointments.create');
         }else {
             $appointment = Appointment::create($request->all());
-            Toastr::success('No more slot for this time duration','Appointment Success');
+            Toastr::success('Appointment managed to book successfully','Appointment Success');
             return redirect()->route('frontend.appointments.index');
         }
     }

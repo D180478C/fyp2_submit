@@ -25,7 +25,7 @@
                 <span class="help-block">{{ trans('cruds.vaccineTag.fields.vaccine_status_helper') }}</span>
             </div>
             <div class="form-group">
-                <button class="btn btn-danger" type="submit">
+                <button class="btn btn-add" type="submit">
                     {{ trans('global.save') }}
                 </button>
             </div>

@@ -6,7 +6,7 @@
             @can('appointment_create')
                 <div style="margin-bottom: 10px;" class="row">
                     <div class="col-lg-12">
-                        <a class="btn btn-success" href="{{ route('frontend.appointments.create') }}">
+                        <a class="btn btn-add" href="{{ route('frontend.appointments.create') }}">
                             {{ trans('global.add') }} {{ trans('cruds.appointment.title_singular') }}
                         </a>
                     </div>
@@ -18,7 +18,7 @@
                 </div>
 
                 <div class="card-body">
-                    <div class="table-responsive">
+                    <div class="table">
                         <table class=" table table-bordered table-striped table-hover datatable datatable-Appointment">
                             <thead>
                                 <tr>
@@ -61,14 +61,10 @@
                                             {{ $appointment->time->time ?? '' }}
                                         </td>
                                         <td>
-                                            @can('appointment_show')
-                                                <a class="btn btn-xs btn-primary" href="{{ route('frontend.appointments.show', $appointment->id) }}">
-                                                    {{ trans('global.view') }}
-                                                </a>
-                                            @endcan
+                                            
 
                                             @can('appointment_edit')
-                                                <a class="btn btn-xs btn-info" href="{{ route('frontend.appointments.edit', $appointment->id) }}">
+                                                <a class="btn btn-xs btn-a" href="{{ route('frontend.appointments.edit', $appointment->id) }}">
                                                     {{ trans('global.edit') }}
                                                 </a>
                                             @endcan

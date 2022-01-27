@@ -66,7 +66,10 @@
 
                     <button class="btn btn-block btn-primary">
                         {{ trans('global.register') }}
-                    </button>
+                    </button>                    
+                            <a class="btn btn-block btn-primary" href="{{ route('login') }}">
+                                    {{ trans('global.login') }}
+                            </a>   
                 </form>
 
             </div>

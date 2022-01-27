@@ -107,9 +107,10 @@
                             <span class="help-block">{{ trans('cruds.usersInfo.fields.vaccine_status_helper') }}</span>
                         </div>
                         <div class="form-group">
-                            <button class="btn btn-danger" type="submit">
+                            <button class="btn btn-add" type="submit">
                                 {{ trans('global.save') }}
                             </button>
+                            <a href="{{route('frontend.users-infos.index')}}" class="btn btn-danger"> << Back </a>
                         </div>
                     </form>
                 </div>

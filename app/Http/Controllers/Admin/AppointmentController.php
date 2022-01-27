@@ -20,7 +20,7 @@ class AppointmentController extends Controller
         abort_if(Gate::denies('appointment_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         $appointments = Appointment::with(['time', 'created_by'])->get();
-        Toastr::success('No more slot for this time duration','Appointment Success');
+         
         return view('admin.appointments.index', compact('appointments'));
     }
 
@@ -36,6 +36,8 @@ class AppointmentController extends Controller
     public function store(StoreAppointmentRequest $request)
     {
         $appointment = Appointment::create($request->all());
+
+        Toastr::success('Appointment managed to book successfully','Appointment Success');
 
         return redirect()->route('admin.appointments.index');
     }

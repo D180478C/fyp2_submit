@@ -58,7 +58,7 @@ table.dataTable thead th {
 
 .btn-info,
 .badge-info {
-    color: white;
+    color:white;
 }
 
 table.dataTable thead .sorting,
@@ -1946,3 +1946,75 @@ section {
     color: #fff;
     text-decoration: none;
 }
+
+/*--------------------------------------------------------------
+  # userinfo
+  --------------------------------------------------------------*/
+  .userinfoheader{
+    padding-left : 27px;
+    padding-top : 10px;
+    font-family:verdana ;
+    background-color: #DEE6FF;
+    height :50px;
+    border-radius: 10px;
+    font-weight: bold;
+    border-bottom: solid 1px;
+  }
+  .tablea{
+    border-left: solid 2px;
+    border-right: solid 2px;
+    width : 560px;
+    margin-left:auto;
+    margin-right:auto;
+    border-color:  lightgrey;
+   
+  }
+
+  .btnedit{
+    
+    background-color: black;
+    font-size: 16px;
+    text-align: center;
+    width :50px;
+    margin-left:780px;
+    color: white;
+  }
+  
+/*----------------------------------------------------------------------
+# appointment from
+----------------------------------------------------------------------*/
+ .btn-a{
+    background-color: #32bce6;  
+    color: white;
+ }
+
+ .btn-add{
+  background-color: #325ce6;
+  border: none;
+  color: white;
+  
+  text-align: center;
+  font-size: 15px;
+  
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  width: 140px;
+  height : 35px;
+ }
+ .btn-add:hover {
+     opacity: 1
+     
+    }
+
+ .card-header{
+    background-color: #DEE6FF;  
+    font-weight:bold;
+ }
+
+ .table-striped  {
+    background-color: white;   
+ }
+
